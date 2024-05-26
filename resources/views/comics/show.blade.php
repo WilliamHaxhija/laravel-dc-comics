@@ -13,6 +13,9 @@
             <div><strong>Series:</strong> {{ $comic->series }}</div>
             <div><strong>Type:</strong> {{ $comic->type }}</div>
             <div><strong>Price:</strong> {{ $comic->price }}</div>
+            <div>
+                <a rel="stylesheet" href="{{route('comics.edit', $comic->id)}}">Edit</a>
+            </div>
         </div>
     </div>
 </div>
