@@ -1,6 +1,7 @@
 @extends('layouts.web')
 
 @section('content')
+<section class="ms-form py-3 bg-dark">
     <div class="container">
         <h1>Edit Product</h1>
         <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
@@ -62,4 +63,5 @@
             <button type="submit" class="btn btn-primary">Edit</button>
         </form>
     </div>
+</section>
 @endsection
