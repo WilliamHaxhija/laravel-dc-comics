@@ -1,1 +1,107 @@
+@use './partials/variables' as *;
+@use './partials/header.scss';
+@use './partials/hero.scss';
+@use './partials/footer.scss';
 @import '~bootstrap/scss/bootstrap';
+
+section.cards {
+    .banner {
+        background-color: $brand-primary;
+        max-width: fit-content;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .banner-top {
+        position: absolute;
+        left: 0;
+        top: -1.5rem;
+        cursor: pointer;
+    }
+
+    button {
+        border: none;
+
+        &.banner {
+            font-size: 0.8rem;
+            padding: 0.6rem 3.3rem;
+            margin: 0;
+        }
+
+        &:hover {
+            opacity: 0.85;
+            transition: 0.2s;
+        }
+    }
+
+    .single-card {
+        color: white;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 179px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        img {
+
+            &:hover {
+                opacity: 0.5;
+                transition: 0.2s;
+                transform: scale(1.1);
+                transition: 0.2s;
+            }
+        }
+    }
+}
+
+.features-ctn {
+    background-color: $brand-primary;
+    padding: 2.5rem 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+
+    }
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+    &.last {
+        flex-grow: 1;
+
+        img {
+            max-width: 16.5%;
+        }
+    }
+
+    img {
+        max-width: 20%;
+
+        &.locator {
+            max-height: 59px;
+            margin-left: 1rem;
+        }
+    }
+
+    span {
+        margin-left: 1rem;
+        font-size: smaller;
+    }
+}
